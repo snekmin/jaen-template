@@ -17,7 +17,7 @@ const App: React.FC = () => {
   return (
     <div style={{margin: 150}}>
       <CMSProvider
-        settings={{gitRemote: 'snek-shipyard/jaen-template'}}
+        settings={{gitRemote: process.env.REACT_APP_JAEN_GIT_REMOTE}}
         pages={[HomePage]}></CMSProvider>
     </div>
   )
