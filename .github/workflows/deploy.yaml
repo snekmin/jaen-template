@@ -32,3 +32,8 @@ jobs:
           npm install
           npm run deploy
           wget https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/jaen-storage/jaen-data.json
+
+      # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
+      - name: Configure Jaen gitRemote 🔧
+        run: |
+          echo 'REACT_APP_JAEN_GIT_REMOTE="${GITHUB_REPOSITORY}"' > .env.local
