@@ -14,10 +14,6 @@
   <cite>"A bowl is most useful when it is empty."</cite> - Lao Tzu
   <br>
   <br>
-  A CMS shouldn't be the de defining feature of a webapp. Nighter should Ecommerce or anything other than your code.<br>
-  While ERP integration is an essential part of enterprise software, it <strong>shouldn't</strong> force developer to cut corners.
-  <br>
-  <br>
   <a href="https://github.com/snek-shipyard/jaen-cms/issues/new?template=bug_report.md">Report bug</a>
   ·
   <a href="https://github.com/snek-shipyard/jaen-cms/issues/new?template=feature_request.md">Request feature</a>
@@ -45,7 +41,9 @@
 - [Copyright and license](#copyright-and-license)
 
 ## [](#motivation)Motivation
-
+A CMS **shouldn not** be the defining feature of a webapp. Nighter should Ecommerce or anything other than your code. \
+ERP integration **shouldn not** force developer to cut corners.
+  
 -  Jaen **does not** interfere with **your** user experience.
 -  Jean **does not** challange **your** application design.
 -  Jaen gives the power back to **you**.
@@ -53,9 +51,10 @@
 One thing and one thing only with clean and well documented interfaces.
 Customizable, extensible and open-source.
 
-**Break free, cause chasing ones own tail is not inspiring.**
+**Msg inspiring ppl:** \
+Chasing ones own tail is not inspiring.
 
-**Disclaimer:**
+**Disclaimer:** \
 Not for crybabies. Do not touch if you are affraid to be a bit scratche.
 
 ## [](#quick-start)Quick start
