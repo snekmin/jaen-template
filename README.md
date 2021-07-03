@@ -41,12 +41,13 @@
 - [Copyright and license](#copyright-and-license)
 
 ## [](#motivation)Motivation
+
 A CMS **shouldn not** be the defining feature of a webapp. Nighter should Ecommerce or anything other than your code. \
 ERP integration **shouldn not** force developer to cut corners.
-  
--  Jaen **does not** interfere with **your** user experience.
--  Jean **does not** challange **your** application design.
--  Jaen gives the power back to **you**.
+
+- Jaen **does not** interfere with **your** user experience.
+- Jean **does not** challange **your** application design.
+- Jaen gives the power back to **you**.
 
 One thing and one thing only with clean and well documented interfaces.
 Customizable, extensible and open-source.
@@ -61,21 +62,23 @@ Not for crybabies. Do not touch if you are affraid to be a bit scratche.
 
 Several quick start options are available:
 
--   Generate repository from template: [Generate Jaen on github](https://github.com/snek-shipyard/jaen-template/generate)
+- Generate repository from template: [Generate Jaen on github](https://github.com/snek-shipyard/jaen-template/generate)
 
 ### Codespace setup
+
 The easiest method is to use a GitHub [Codespace](https://github.com/features/codespaces) (in beta). Just create a GitHub Codespace from the Code menu. Wait for the Codespace to complete provisioning. When the Codespace has completed provisioning open a terminal window (Ctrl-`, Control-backquote) and:
 
--   Start a local copy of the docs site with `npm start`
--   Or build a local copy of the library with `npm run build`
+- Start a local copy of the docs site with `npm start`
+- Or build a local copy of the library with `npm run build`
 
 ### Local setup
+
 If you set this up locally, make sure you have the following pre-requisites:
 
--   Add github npm registry: npm login --registry=https://npm.pkg.github.com
--   Use `npm install` to install all dependencies
--   Start a local copy of the docs site with `npm start`
--   Or build a local copy of the library with `npm run build`
+- Add github npm registry: npm login --registry=https://npm.pkg.github.com
+- Use `npm install` to install all dependencies
+- Start a local copy of the docs site with `npm start`
+- Or build a local copy of the library with `npm run build`
 
 The demo site will now be accessible at <http://localhost:3000/>.
 

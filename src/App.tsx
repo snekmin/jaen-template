@@ -1,6 +1,6 @@
 /**
  * @license
- * 
+ *
  * SPDX-FileCopyrightText: Copyright © 2021 snek.at
  * SPDX-License-Identifier: EUPL-1.2
  *
@@ -11,7 +11,7 @@ import {CMSProvider} from '@snek-shipyard/jaen-cms'
 
 import '~/common/css/base.scss'
 
-import {HomePage} from './jaen/pages'
+import {HomePage} from './example/pages'
 
 const App: React.FC = () => {
   return (

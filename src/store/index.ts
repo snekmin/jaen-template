@@ -1,6 +1,6 @@
 /**
  * @license
- * 
+ *
  * SPDX-FileCopyrightText: Copyright © 2021 snek.at
  * SPDX-License-Identifier: EUPL-1.2
  *
@@ -25,6 +25,6 @@ export const store = configureStore({
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
-export interface RootState extends ReturnType<typeof store.getState> {}
+export type RootState = ReturnType<typeof store.getState>
 // Inferred type: {counter: CounterState}
 export type AppDispatch = typeof store.dispatch
