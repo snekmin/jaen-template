@@ -1,6 +1,6 @@
 /**
  * @license
- * 
+ *
  * SPDX-FileCopyrightText: Copyright © 2021 snek.at
  * SPDX-License-Identifier: EUPL-1.2
  *
