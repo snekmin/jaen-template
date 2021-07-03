@@ -1,0 +1,40 @@
+{
+  "dataLayer": {
+    "working": {
+      "pages": {
+        "home": {
+          "fields": {
+            "cards": {
+              "blocks": {
+                "0": {
+                  "typeName": "CardBlock"
+                }
+              }
+            },
+            "cards-reversed": {
+              "blocks": {
+                "0": {
+                  "typeName": "CardBlock"
+                }
+              }
+            }
+          },
+          "typeName": "HomePage"
+        }
+      },
+      "updateFieldsCount": 0
+    }
+  },
+  "index": {
+    "checksum": "d716d3da6493f8e1ad5c9dc480ea595b0402355815f25c5353c6e37413516f32d",
+    "pages": {
+      "home": {
+        "childSlugs": [],
+        "slug": "home",
+        "title": "Template HomePage",
+        "typeName": "HomePage"
+      }
+    },
+    "rootPageSlug": "home"
+  }
+}
