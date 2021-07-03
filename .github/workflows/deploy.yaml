@@ -20,7 +20,7 @@ jobs:
       # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '15'
 
       # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
       - name: Github package registry authentication
