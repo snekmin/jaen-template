@@ -53,7 +53,7 @@ jobs:
             # Adjust package.json
             packageJson=$(<package.json)
 
-            domain="${GITHUB_REPOSITORY/'/'/'-'}.snek.at"
+            domain="${GITHUB_REPOSITORY#*@}.${GITHUB_ACTOR}.snek.at"
 
             homepageOld="https://template.snek.at/"
             homepage="https://$domain/"
