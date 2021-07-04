@@ -46,9 +46,8 @@ jobs:
 
             # Adjust Jaen env
             gitRemoteTemplate="snek-shipyard/jaen-template"
-            envLocal=$(<.env.local)
             envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
-            echo $envLocalAdjusted > .env.local
+            sed -i "s|$gitRemoteTemplate|$GITHUB_REPOSITORY|g" .env.local
             git add .env.local
 
             # Adjust CNAME
@@ -57,17 +56,15 @@ jobs:
             git add public/CNAME
             
             # Adjust package.json
-            packageJson=$(<package.json)
             homepageOld="https://template.snek.at/"
             homepage="https://$domain/"
             repositoryOld="git+https://github.com/snek-at/jaen-template.git"
             repository="git+https://github.com/${GITHUB_REPOSITORY}.git"
             bugsurlOld="https://github.com/snek-at/jaen-template/issues"
             bugsurl="https://github.com/${GITHUB_REPOSITORY}/issues"
-            packageJson=${packageJson/$homepageOld/$homepage}
-            packageJson=${packageJson/$repositoryOld/$repository}
-            packageJson=${packageJson/$bugsurlOld/$bugsurl}
-            echo ${{ toJson($packageJson) }} > package.json
+            sed -i "s|$homepageOld|$homepage|g" package.json
+            sed -i "s|$repositoryOld|$repository|g" package.json
+            sed -i "s|$bugsurlOld|$bugsurl|g" package.json
             git add package.json
 
             # Git: commit, and push changes
