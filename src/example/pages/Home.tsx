@@ -13,7 +13,7 @@ import {
   SimpleRichTextField as RichTextField,
   IndexField,
   StreamField
-} from '@snek-shipyard/jaen-cms'
+} from '@snek-at/jaen'
 
 import {CardBlock} from '../blocks'
 

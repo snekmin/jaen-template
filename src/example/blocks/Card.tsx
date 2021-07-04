@@ -7,12 +7,7 @@
  * Use of this source code is governed by an EUPL-1.2 license that can be found
  * in the LICENSE file at https://snek.at/license
  */
-import {
-  BC,
-  EditableField,
-  RichTextField,
-  prepareBlocks
-} from '@snek-shipyard/jaen-cms'
+import {BC, EditableField, RichTextField, prepareBlocks} from '@snek-at/jaen'
 
 type CardBlockFields = {title: string; extra: string; text: string}
 
