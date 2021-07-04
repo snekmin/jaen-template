@@ -49,6 +49,26 @@ jobs:
             envLocal=$(<.env.local)
             envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
             echo $envLocalAdjusted > .env.local
+
+            # Adjust package.json
+            packageJson=$(<package.json)
+
+            domain="${GITHUB_ACTOR}.snek.at"
+
+            homepageOld="https://template.snek.at/"
+            homepage="https://$domain/"
+            repositoryOld="git+https://github.com/snek-at/jaen-template.git"
+            repository="git+https://github.com/${GITHUB_REPOSITORY}.git"
+            bugsurlOld="https://github.com/snek-at/jaen-template/issues"
+            bugsurl="https://github.com/${GITHUB_REPOSITORY}/issues"
+            
+            echo ${domain} > public/CNAME
+            echo ${packageJson/$homepageOld/$homepage}
+            echo ${packageJson/$repositoryOld/$repository}
+            echo ${packageJson/$bugsurlOld/$bugsurl}
+
+            envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
+            echo $envLocalAdjusted > .env.local
             # Git: add, commit, and push changes
             git add .env.local
             git commit -m "Configure Jaen gitRemote" || echo "Nothing to commit, working tree clean."
