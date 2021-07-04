@@ -70,7 +70,7 @@ jobs:
             envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
             echo $envLocalAdjusted > .env.local
             # Git: add, commit, and push changes
-            git add .env.local
+            git add .
             git commit -m "Configure Jaen gitRemote" || echo "Nothing to commit, working tree clean."
             GIT_TRACE=1 git push -f --verbose origin main
 
