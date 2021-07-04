@@ -45,7 +45,10 @@ jobs:
             echo "Configure Jaen gitRemote"
 
             # Adjust Jaen config
-            echo REACT_APP_JAEN_GIT_REMOTE=${GITHUB_REPOSITORY} > .env.local
+            gitRemoteTemplate="snek-shipyard/jaen-template"
+            envLocal=$(<.env.local)
+            envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
+            echo $envLocalAdjusted > .env.local
             # Git: add, commit, and push changes
             git add .env.local
             git commit -m "Configure Jaen gitRemote"
