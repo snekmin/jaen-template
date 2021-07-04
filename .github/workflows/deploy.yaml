@@ -45,7 +45,7 @@ jobs:
             echo "Configure Jaen gitRemote"
 
             # Adjust Jaen env
-            gitRemoteTemplate="snek-shipyard/jaen-template"
+            gitRemoteTemplate="snek-at/jaen-template"
             envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
             sed -i "s|$gitRemoteTemplate|$GITHUB_REPOSITORY|g" .env.local
             git add .env.local
