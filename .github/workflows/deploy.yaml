@@ -74,6 +74,9 @@ jobs:
             git add jaen-data.json
             git commit -m "Update jaen-data.json" || echo "Nothing to commit, working tree clean."
             GIT_TRACE=1 git push -f --verbose origin gh-pages
+          else
+            # Jaen is already configured"
+            echo "Jaen has already been initialized"
           fi
 
       # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
