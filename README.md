@@ -4,24 +4,24 @@
   </a>
 </p>
 
-<h3 align="center">snek-shipyard - Jaen aka snek(J)</h3>
+<h3 align="center">Snek Jaen Template</h3>
 
 <p align="center">
-  This is the official jaen-cms projects of snek-shipyard.
+  This is the official jaen projects of snek-at.
   Free, sexy and cutting edge CMS framework for ReactJS.
   <br>
   <br>
   <cite>"A bowl is most useful when it is empty."</cite> - Lao Tzu
   <br>
   <br>
-  <a href="https://github.com/snek-shipyard/jaen-cms/issues/new?template=bug_report.md">Report bug</a>
+  <a href="https://github.com/snek-at/jaen/issues/new?template=bug_report.md">Report bug</a>
   ·
-  <a href="https://github.com/snek-shipyard/jaen-cms/issues/new?template=feature_request.md">Request feature</a>
+  <a href="https://github.com/snek-at/jaen/issues/new?template=feature_request.md">Request feature</a>
   ·
   <a href="https://www.overleaf.com/read/bcxwhwbhrmps">Documentation</a>
   <br>
   <br>
-  <a href="https://www.codacy.com/gh/snek-shipyard/jaen-cms/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=snek-shipyard/jaen-cms&amp;utm_campaign=Badge_Grade">
+  <a href="https://www.codacy.com/gh/snek-at/jaen/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=snek-at/jaen&amp;utm_campaign=Badge_Grade">
     <img src="https://app.codacy.com/project/badge/Grade/bb3d984d38704860ba7ad800d319b8c4" />
   </a>
 </p>
@@ -42,8 +42,8 @@
 
 ## [](#motivation)Motivation
 
-A CMS **shouldn not** be the defining feature of a webapp. Nighter should Ecommerce or anything other than your code. \
-ERP integration **shouldn not** force developer to cut corners.
+A CMS **should not** be the defining feature of a webapp. Nighter should Ecommerce or anything other than your code. \
+ERP integration **should not** force developer to cut corners.
 
 - Jaen **does not** interfere with **your** user experience.
 - Jean **does not** challange **your** application design.
@@ -62,7 +62,7 @@ Not for crybabies. Do not touch if you are affraid to be a bit scratche.
 
 Several quick start options are available:
 
-- Generate repository from template: [Generate Jaen on github](https://github.com/snek-shipyard/jaen-template/generate)
+- Generate repository from template: [Generate Jaen on GitHub](https://github.com/snek-at/jaen-template/generate)
 
 ### Codespace setup
 
@@ -85,20 +85,20 @@ The demo site will now be accessible at <http://localhost:3000/>.
 ## [](#bug-and-feature-requests)Bugs and feature requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not
-addressed yet, [please open a new issue](https://github.com/snek-shipyard/jaen-cms/issues/new/choose).
+addressed yet, [please open a new issue](https://github.com/snek-at/jaen/issues/new/choose).
 
 ## [](#contributing)Contributing
 
-![GitHub last commit](https://img.shields.io/github/last-commit/snek-shipyard/jaen-cms)
-![GitHub issues](https://img.shields.io/github/issues-raw/snek-shipyard/jaen-cms)
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/snek-shipyard/jaen-cms?color=green)
+![GitHub last commit](https://img.shields.io/github/last-commit/snek-at/jaen)
+![GitHub issues](https://img.shields.io/github/issues-raw/snek-at/jaen)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/snek-at/jaen?color=green)
 
 Please read through our
-[contributing guidelines](https://github.com/snek-shipyard/jaen-cms/blob/master/CONTRIBUTING.md). Included are
+[contributing guidelines](https://github.com/snek-at/jaen/blob/master/CONTRIBUTING.md). Included are
 directions for opening issues, coding standards, and notes on development.
 
-All code should conform to the [Code Guide](https://github.com/snek-shipyard/tonic/blob/master/STYLE_GUIDE.md), maintained by
-[snek-shipyard](https://github.com/snek-shipyard).
+All code should conform to the [Code Guide](https://github.com/snek-at/tonic/blob/master/STYLE_GUIDE.md), maintained by
+[snek-at](https://github.com/snek-at).
 
 ## [](#versioning)Versioning
 
