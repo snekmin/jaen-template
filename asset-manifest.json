@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/snek-shipyard/jaen-templatestatic/css/main.c8a28445.chunk.css",
+    "main.js": "/snek-shipyard/jaen-templatestatic/js/main.e6567f2e.chunk.js",
+    "main.js.map": "/snek-shipyard/jaen-templatestatic/js/main.e6567f2e.chunk.js.map",
+    "runtime-main.js": "/snek-shipyard/jaen-templatestatic/js/runtime-main.8adb9021.js",
+    "runtime-main.js.map": "/snek-shipyard/jaen-templatestatic/js/runtime-main.8adb9021.js.map",
+    "static/css/2.2dd063de.chunk.css": "/snek-shipyard/jaen-templatestatic/css/2.2dd063de.chunk.css",
+    "static/js/2.39f11b51.chunk.js": "/snek-shipyard/jaen-templatestatic/js/2.39f11b51.chunk.js",
+    "static/js/2.39f11b51.chunk.js.map": "/snek-shipyard/jaen-templatestatic/js/2.39f11b51.chunk.js.map",
+    "index.html": "/snek-shipyard/jaen-templateindex.html",
+    "static/css/2.2dd063de.chunk.css.map": "/snek-shipyard/jaen-templatestatic/css/2.2dd063de.chunk.css.map",
+    "static/css/main.c8a28445.chunk.css.map": "/snek-shipyard/jaen-templatestatic/css/main.c8a28445.chunk.css.map",
+    "static/js/2.39f11b51.chunk.js.LICENSE.txt": "/snek-shipyard/jaen-templatestatic/js/2.39f11b51.chunk.js.LICENSE.txt",
+    "static/js/main.e6567f2e.chunk.js.LICENSE.txt": "/snek-shipyard/jaen-templatestatic/js/main.e6567f2e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8adb9021.js",
+    "static/css/2.2dd063de.chunk.css",
+    "static/js/2.39f11b51.chunk.js",
+    "static/css/main.c8a28445.chunk.css",
+    "static/js/main.e6567f2e.chunk.js"
+  ]
+}
