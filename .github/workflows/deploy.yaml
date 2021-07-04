@@ -51,7 +51,7 @@ jobs:
             echo $envLocalAdjusted > .env.local
             # Git: add, commit, and push changes
             git add .env.local
-            git commit -m "Configure Jaen gitRemote"
+            git commit -m "Configure Jaen gitRemote" || echo "Nothing to commit, working tree clean."
             GIT_TRACE=1 git push -f --verbose origin main
 
             echo "Create jaen-storage branch"
@@ -65,14 +65,14 @@ jobs:
             cat jaen-data.json
             # Git: add, commit, and push changes
             git add jaen-data.json
-            git commit -m "Update jaen-data.json"
+            git commit -m "Update jaen-data.json" || echo "Nothing to commit, working tree clean."
             GIT_TRACE=1 git push -f --verbose origin jaen-storage
 
             # Create gh-pages branch without history
             git checkout --orphan gh-pages
             echo '' > jaen-data.json
             git add jaen-data.json
-            git commit -m "Update jaen-data.json"
+            git commit -m "Update jaen-data.json" || echo "Nothing to commit, working tree clean."
             GIT_TRACE=1 git push -f --verbose origin gh-pages
           fi
 
