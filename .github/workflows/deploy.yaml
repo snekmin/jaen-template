@@ -25,7 +25,7 @@ jobs:
       # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
       - name: Github package registry authentication
         run: npm set //npm.pkg.github.com/:_authToken ${{ secrets.GITHUB_TOKEN }}
-  
+
       # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
       - name: Configure GitHub authentication 🔧
         # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -33,22 +33,55 @@ jobs:
           # Git: set identity
           git config --global user.name "snekmin"
           git config --global user.email "noreply.snek.at@gmail.com"
-          # Git: set remote  
+          # Git: set remote
           # https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#http-based-git-access-by-an-installation
           git remote set-url origin "https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git"
-          
-      # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
-      - name: Install and Build 🔧 
-        run: |
-          npm install
-          npm run deploy
-          wget https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/jaen-storage/jaen-data.json
 
       # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
-      - name: Configure Jaen gitRemote 🔧
+      - name: Add Jaen data 🔧
         run: |
-          echo 'REACT_APP_JAEN_GIT_REMOTE="${GITHUB_REPOSITORY}"' > .env.local
-          git add .
-          git commit -m "Configure Jaen gitRemote"
-          git push
-          
+          if [[ -z $(git ls-remote --heads origin jaen-storage) ]]; then
+            echo "There is no Jaen data deployed"
+            echo "Configure Jaen gitRemote"
+
+            # Adjust Jaen config
+            gitRemoteTemplate="snek-shipyard/jaen-template"
+            envLocal=$(<.env.local)
+            envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
+            echo $envLocalAdjusted > .env.local
+            # Git: add, commit, and push changes
+            git add .env.local
+            git commit -m "Configure Jaen gitRemote" || echo "Nothing to commit, working tree clean."
+            GIT_TRACE=1 git push -f --verbose origin main
+
+            echo "Create jaen-storage branch"
+            # Create jean-storage branch without history
+            git checkout --orphan jaen-storage
+            # Remove unnecessary files
+            git rm -rf .
+            # Create `jaen-data.json`
+            echo '' > jaen-data.json
+            # reveal what `jaen-data.json` looks like in the logs
+            cat jaen-data.json
+            # Git: add, commit, and push changes
+            git add jaen-data.json
+            git commit -m "Update jaen-data.json" || echo "Nothing to commit, working tree clean."
+            GIT_TRACE=1 git push -f --verbose origin jaen-storage
+
+            # Create gh-pages branch without history
+            git checkout --orphan gh-pages
+            echo '' > jaen-data.json
+            git add jaen-data.json
+            git commit -m "Update jaen-data.json" || echo "Nothing to commit, working tree clean."
+            GIT_TRACE=1 git push -f --verbose origin gh-pages
+          else
+            # Jaen is already configured"
+            echo "Jaen has already been initialized"
+          fi
+
+      # https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idstepsid
+      - name: Install and Build 🔧
+        run: |
+          git checkout main
+          npm install
+          npm run deploy
