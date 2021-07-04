@@ -65,7 +65,7 @@ jobs:
             packageJson=${packageJson/$homepageOld/$homepage}
             packageJson=${packageJson/$repositoryOld/$repository}
             packageJson=${packageJson/$bugsurlOld/$bugsurl}
-            echo $packageJson > package.json
+            echo ${{ toJson(packageJson) }} > package.json
 
             # Git: add, commit, and push changes
             git add .
