@@ -49,10 +49,12 @@ jobs:
             envLocal=$(<.env.local)
             envLocalAdjusted="${envLocal/$gitRemoteTemplate/$GITHUB_REPOSITORY}"
             echo $envLocalAdjusted > .env.local
+            git add .env.local
 
             # Adjust CNAME
             domain="${GITHUB_REPOSITORY#*/}.${GITHUB_ACTOR}.snek.at"
             echo ${domain} > public/CNAME
+            git add public/CNAME
             
             # Adjust package.json
             packageJson=$(<package.json)
@@ -66,9 +68,9 @@ jobs:
             packageJson=${packageJson/$repositoryOld/$repository}
             packageJson=${packageJson/$bugsurlOld/$bugsurl}
             echo ${{ toJson(packageJson) }} > package.json
+            git add package.json
 
-            # Git: add, commit, and push changes
-            git add .
+            # Git: commit, and push changes
             git commit -m "Configure Jaen gitRemote" || echo "Nothing to commit, working tree clean."
             GIT_TRACE=1 git push -f --verbose origin main
 
