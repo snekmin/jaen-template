@@ -51,7 +51,7 @@ jobs:
             git add .env.local
 
             # Adjust CNAME
-            domain="${GITHUB_REPOSITORY#*/}.${GITHUB_ACTOR}.snek.at"
+            domain="${GITHUB_REPOSITORY#*/}.${GITHUB_REPOSITORY%*/}.snek.at"
             echo ${domain} > public/CNAME
             git add public/CNAME
             
